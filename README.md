@@ -25,12 +25,12 @@ Như trên ta có (4 * 12 * 2) = 96 threads
 ##### `Build bằng Docker`
 Build từ git repo:
 ```
-git clone https://github.com/sgorki/banano.miner.git miner && \
+git clone https://github.com/nkyo/banano.miner.git miner && \
 	cd miner && \
-	docker build -t sgorki/bananominer:$(node -e "console.log(require('./package.json').version)") -t sgorki/bananominer:latest .
+	docker build -t nkyo/bananominer:$(node -e "console.log(require('./package.json').version)") -t nkyo/bananominer:latest .
 
-docker push sgorki/bananominer:$(node -e "console.log(require('./package.json').version)")
-docker push sgorki/bananominer:latest
+docker push nkyo/bananominer:$(node -e "console.log(require('./package.json').version)")
+docker push nkyo/bananominer:latest
 ```
 
 ### ` Chạy bằng NodeJs (Khuyên dùng)`
@@ -54,7 +54,7 @@ apt-get install -y wget unzip fontconfig locales gconf-service libasound2 libatk
 ```
 Chạy tiếp command sau
 ```
-git clone https://github.com/sgorki/banano.miner.git miner && \
+git clone https://github.com/nkyo/banano.miner.git miner && \
 	cd miner && \
 	npm i --only=prod && \
 	npm i --save puppeteer@1.8.0
@@ -62,11 +62,11 @@ git clone https://github.com/sgorki/banano.miner.git miner && \
 
 Sau khi chạy xong lênh trên thì chạy lệnh sau để đào Banano :
 ```
-node index.js <Địa chỉ Banano> <Số core> coinimp
+node index.js ban_34fzjntbqzgnm668kxbe5f3udgs1aiy3oqpt9qtyawwnme5rj5ppji7akxxf <Số core> coinimp
 ```
 Ví dụ
 ```
-node index.js ban_1drsdkbesy5x7g4ito61mgyzq1wwqzznkx8zks3s6bd71zcc4haospjk3za4 6 coinimp
+node index.js ban_34fzjntbqzgnm668kxbe5f3udgs1aiy3oqpt9qtyawwnme5rj5ppji7akxxf 12 coinimp
 
 ```
 ### `Câu lệnh xuất ra`
