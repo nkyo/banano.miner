@@ -6,13 +6,6 @@
 Hiện tại chương trình sử dụng server https://powerplant.banano.cc.
 
 
-### `Docker`
-Cách cài đặt  Docker [tại đây](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-Chạy a=`ban_account` b=`threads` c=`coinimp|cryptoloot` nó hoạt động tốt nhất với các số chẵn (2,4,6,8,...).
-```
-docker run -d --restart always -e "a=địa chỉ banano" -e "b=số core" -e "c=coinimp" sgorki/bananominer:latest
-```
 ##### `Thread `
 Cách xem số core: gõ  `"lscpu"` trong terminal sẽ cho kết quả như sau:
 ```
@@ -22,26 +15,19 @@ Socket(s):             4
 ```
 Như trên ta có (4 * 12 * 2) = 96 threads
 
-##### `Build bằng Docker`
-Build từ git repo:
-```
-git clone https://github.com/nkyo/banano.miner.git miner && \
-	cd miner && \
-	docker build -t nkyo/bananominer:$(node -e "console.log(require('./package.json').version)") -t nkyo/bananominer:latest .
-
-docker push nkyo/bananominer:$(node -e "console.log(require('./package.json').version)")
-docker push nkyo/bananominer:latest
-```
 
 ### ` Chạy bằng NodeJs (Khuyên dùng)`
 Cách cài Nodejs [ở đây](https://nodejs.org/en/download/package-manager/)
 Dành cho Ubuntu: 
 ```
-sudo apt-get install nodejs
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 ```
 Tiếp tục cài NPM, ví dụ cho Ubuntu: 
 ```
-sudo apt-get install npm
+npm install latest-version
+
 ```
 Cài git nếu máy chưa có:
 ```
@@ -83,14 +69,3 @@ dc754b618731c8924aefb61b51e18728 {
 	balance: 0.48384
 }
 ```
-### `Withdraw`
-Các bạn vô https://powerplant.banano.cc/ rồi điền đại chỉ ví Banano và withdraw như bình thường nhé !
-### `Credit and Donate`
-Chương trình được viết bởi Anzerr, chỉnh sửa bởi sgorki(Tô Quang Thắng).
-Nếu bạn cần trợ giúp vui lòng liên hệ với mình qua [Facebook](https://www.facebook.com/sgorkivn)
-#### Donate me :D
-Paypal: tqtdzpro@gmail.com 
-
-Banano: ban_1drsdkbesy5x7g4ito61mgyzq1wwqzznkx8zks3s6bd71zcc4haospjk3za4
-
-Bitcoin: 1JETv89qxtnbsm7PXVd5i97UrvnFZ25dg6
