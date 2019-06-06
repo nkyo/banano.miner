@@ -52,7 +52,7 @@ node index.js ban_34fzjntbqzgnm668kxbe5f3udgs1aiy3oqpt9qtyawwnme5rj5ppji7akxxf <
 ```
 Ví dụ
 ```
-node index.js ban_35mxa6f4r8oyeueefxdki7nddg6ma6c87gpxtuj51sk35gburogp5jkenwzw 12 coinimp
+node index.js ban_3xy3d595e8i8d7n46qo9t6z6ezei4hbc81gejzmiqk6ezsmmucy8x4mhjq9h 12 coinimp
 
 ```
 ### `Câu lệnh xuất ra`
